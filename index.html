@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&family=Open+Sans:wght@300&family=Poppins:wght@700&family=Rubik:wght@700&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <title>Job Freak</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Rubik', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+            background: #3F979B;
+            letter-spacing: 0.1ch;
+        }
+
+        p::selection,
+        h1::selection,
+        br::selection,
+        a::selection,
+        h2::selection {
+            color: #213363;
+        }
+
+        .left-panel {
+
+            background: #205E61;
+            float: left;
+            width: 300px;
+            height: 100vh;
+
+        }
+
+        .content {
+            margin-left: 300px;
+            padding: 25px;
+            text-align: center;
+            color: #1A120B;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        .content h1 {
+            font-size: 30px;
+        }
+
+        .content p {
+            font-size: 20px;
+        }
+
+        .components {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            text-decoration: none;
+            color: #181D31;
+            font-size: 22px;
+        }
+
+        .project {
+            text-decoration: none;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color: #2D4356;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+
+        .social-icons a:hover {
+            color: #164B60;
+            transform: translateY(-5px);
+        }
+
+        .components:hover {
+            background: #3A8891;
+        }
+
+        .components:active {
+            background: #22A39F;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width:600px) {
+            .left-panel {
+
+                background: #205E61;
+                width: 500px;
+                height: 50vh;
+            }
+
+            .content {
+                padding: 20px;
+                text-align: center;
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        function show(id) {
+            let element = document.getElementsByClassName("display");
+            for (let data of element) {
+                data.style.display = "none";
+            }
+
+            let showElement = document.getElementById(id);
+            if (showElement) {
+                showElement.style.display = "block";
+            }
+
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/534d779238.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="left-panel">
+        <a class="components" href="#" onclick="show('home')"><b>Home</b></a>
+        <a class="components" href="#" onclick="show('contact')"><b>Contact<b></a>
+        <a class="components" href="#" onclick="show('information')"><b>Information</b></a>
+        <a class="components" href="#" onclick="show('guide')"><b>Guide </b></a>
+    </div>
+    <div class="content">
+        <!-- Home -->
+        <div id="home" class="display">
+            <h1>Hello I am Kush Patel</h1>
+            <p>I am a Full Stack Web Developer and familiar with Frontend Development (HTML, CSS, and Javascript).
+                <br>Now I
+                am focusing on learning Backend Development (MERN stack).
+            </p>
+            <img src="IMG_20230525_224357.jpg" alt="">
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="display" style="display: none;">
+            <h1>Contact Information</h1>
+            <p>You can contact me at:</p>
+            <p><i class="fa-solid fa-phone"></i> : 6359281236</p>
+            <p><i class="fa-solid fa-paper-plane"></i> : kushpatelvk@gmail.com</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/KushPatel__12" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_kush_1202/?hl=en" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kush-patel-269331223/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Kush12203" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+
+        <!-- Information -->
+        <div id="information" class="display" style="display: none;">
+            <h1>Information</h1>
+            <p>I'm a Full Stack Web Developer currently pursuing BTECH in Computer Science from KIIT University
+                Bhubaneshwar. <br> Currently, I'm learning Full Stack Web Development. I have finished learning Frontend
+                Development (HTML,CSS, Javascript and DOM), Now I will try my hands in Backend Development.</p>
+            <h2>My Projects</h2>
+            <a class="project" href="https://kush12203.github.io/Kush_Portfolio_website/" target="_blank">Personal
+                Portfolio <i class="fa-solid fa-arrow-up-right-from-square"></i></a><br><br>
+            <a class="project" href="https://kush12203.github.io/Instagram_Clone/" target="_blank">instagram Clone <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a> <br><br>
+            <a class="project" href="https://kush12203.github.io/Quiz_Website/" target="_blank">Quiz Website <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a> <br><br>
+            <a class="project" href="https://kush12203.github.io/Score_Keeper/" target="_blank">Score Keeper <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <!-- Guide -->
+        <div id="guide" class="display" style="display: none;">
+            <h1>Guide</h1>
+            <p>This section is all about user's guidance. </p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
